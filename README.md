@@ -1,11 +1,11 @@
 # Fabrica Product Starter
 
 プロダクト新規作成用のスターターです。
-Next.jsベースで、`@fabrica/design-system` の利用を前提に構成しています。
+Next.jsベースで、`@fabrica_communications/design-system` の利用を前提に構成しています。
 
 ## 利用対象
 - **通常の開発者**: このスターターリポジトリのみを使って開発します。
-- **デザインシステム担当**: `@fabrica/design-system` を更新・配布し、必要に応じてスターターへ反映します。
+- **デザインシステム担当**: `@fabrica_communications/design-system` を更新・配布し、必要に応じてスターターへ反映します。
 
 ## 必要バージョン
 - Node.js v22 以上
@@ -25,10 +25,10 @@ npm run dev
 
 ## Design System
 
-このスターターは `@fabrica/design-system` を利用します。
+このスターターは `@fabrica_communications/design-system` を利用します。
 
 ### デザインシステムを更新する場合（npm）
-`package.json` の `@fabrica/design-system` のバージョンを更新し、再インストールします。
+`package.json` の `@fabrica_communications/design-system` のバージョンを更新し、再インストールします。
 
 ```bash
 npm install

@@ -1,4 +1,4 @@
-import { Button } from "@fabrica/design-system";
+import { Button } from "@fabrica_communications/design-system";
 
 export default function HomePage() {
   return (
