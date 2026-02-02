@@ -3,38 +3,39 @@
 プロダクト新規作成用のスターターです。
 Next.jsベースで、`@fabrica/design-system` の利用を前提に構成しています。
 
+## 利用対象
+- **通常の開発者**: このスターターリポジトリのみを使って開発します。
+- **デザインシステム担当**: `@fabrica/design-system` を更新・配布し、必要に応じてスターターへ反映します。
+
 ## 必要バージョン
 - Node.js v22 以上
 - npm
 
-## Setup
+## 初期セットアップ
 
 ```bash
 npm install
 npm run dev
 ```
 
-## Storybook
-
-```bash
-npm run storybook
-```
+## よく使うスクリプト
+- `npm run dev`: Next.js 開発サーバーを起動
+- `npm run build`: 本番ビルドを作成
+- `npm run lint`: Lint チェック
 
 ## Design System
 
 このスターターは `@fabrica/design-system` を利用します。
 
-### ローカルでデザインシステムを更新する場合
-本体リポジトリ側で tarball を作り直して再インストールします。
+### デザインシステムを更新する場合（npm）
+`package.json` の `@fabrica/design-system` のバージョンを更新し、再インストールします。
 
 ```bash
-cd ../fabrica-design-system
-npm pack
-cd ../fabrica-product-starter
-npm install ../fabrica-design-system/fabrica-design-system-<version>.tgz
+npm install
 ```
 
-### Private Registry を使う場合
+必要に応じて、`package.json` のバージョンを指定してください。
 
-`.npmrc.example` を `.npmrc` にコピーして、`NPM_TOKEN` を設定してください。
-`.npmrc` はGit管理しません。
+### npmjs を使う場合
+
+npmjs を利用する場合は `npm login` を一度実行してください。
