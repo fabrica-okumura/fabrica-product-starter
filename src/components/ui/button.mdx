@@ -1,0 +1,39 @@
+import { Meta, Story, Canvas, Controls } from "@storybook/addon-docs/blocks";
+import * as ButtonStories from "./button.stories";
+
+<Meta of={ButtonStories} />
+
+# Button
+
+基本的なボタンのバリエーションと挙動を確認します。
+
+## Examples
+
+### Primary
+メインアクション。
+<Canvas of={ButtonStories.Primary} />
+<Controls of={ButtonStories.Primary} />
+
+### Accent
+強い強調アクション。
+<Canvas of={ButtonStories.Accent} />
+
+### Neutral
+セカンダリアクション。
+<Canvas of={ButtonStories.Neutral} />
+
+### Destructive
+破壊的アクション。
+<Canvas of={ButtonStories.Destructive} />
+
+### Small
+<Canvas of={ButtonStories.Small} />
+
+### Icon
+<Canvas of={ButtonStories.Icon} />
+
+### Disabled
+<Canvas of={ButtonStories.Disabled} />
+
+### Focusable
+<Canvas of={ButtonStories.Focusable} />

@@ -1,0 +1,33 @@
+{
+  "sourceRoot": "../fabrica-design-system",
+  "targets": [
+    {
+      "from": "src/components/ui/**/!(*.stories).{ts,tsx}",
+      "to": "src/components/ui"
+    },
+    {
+      "from": "src/components/shared/**/!(*.stories).{ts,tsx}",
+      "to": "src/components/shared"
+    },
+    {
+      "from": "src/styles/**",
+      "to": "src/styles"
+    },
+    {
+      "from": "src/tokens/**",
+      "to": "src/tokens"
+    },
+    {
+      "from": "src/lib/utils.ts",
+      "to": "src/lib/utils.ts"
+    },
+    {
+      "from": "src/app/layout.tsx",
+      "to": "src/app/layout.tsx"
+    },
+    {
+      "from": "src/app/favicon.ico",
+      "to": "src/app/favicon.ico"
+    }
+  ]
+}

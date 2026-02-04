@@ -1,0 +1,20 @@
+import { Meta, Canvas, Controls } from "@storybook/addon-docs/blocks";
+import * as SwitchStories from "./switch.stories";
+
+<Meta of={SwitchStories} />
+
+# Switch
+
+オン/オフを切り替えるトグルスイッチです。`label` を渡すと任意のテキストを表示でき、既定では左側に配置されます。
+
+## Examples
+
+### Default
+<Canvas of={SwitchStories.Default} />
+<Controls of={SwitchStories.Default} />
+
+### Checked
+<Canvas of={SwitchStories.Checked} />
+
+### Disabled
+<Canvas of={SwitchStories.Disabled} />

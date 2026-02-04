@@ -1,2 +1,23 @@
-@import "tailwindcss";
-@import "@fabrica_communications/design-system/styles.css";
+/* Next appルートから読み込む入口。正本は src/styles に集約。 */
+@import "../styles/globals.css";
+
+/* ---- Button override sample ---- */
+[data-slot="button"] {
+  border-radius: 9999px;
+  font-weight: 700;
+}
+
+[data-slot="button"]:hover {
+  transform: translateY(-1px);
+}
+
+.btn-accent[data-slot="button"] {
+  background: var(--usage-button-accent);
+  color: red;
+}
+
+.btn-lg[data-slot="button"] {
+  padding: var(--primitive-spacing-spacing-12)
+    var(--primitive-spacing-spacing-32);
+  font-size: var(--font-size-usage-parts-md);
+}

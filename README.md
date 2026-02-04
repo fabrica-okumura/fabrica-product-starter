@@ -1,11 +1,8 @@
 # Fabrica Product Starter
 
 プロダクト新規作成用のスターターです。
-Next.jsベースで、`@fabrica_communications/design-system` の利用を前提に構成しています。
-
-## 利用対象
-- **通常の開発者**: このスターターリポジトリのみを使って開発します。
-- **デザインシステム担当**: `@fabrica_communications/design-system` を更新・配布し、必要に応じてスターターへ反映します。
+Next.jsベースで、Bリポ内にコンポーネント実体とCSS正本を持ちつつ、
+Aリポ（`fabrica-design-system`）から同期して運用します。
 
 ## 必要バージョン
 - Node.js v22 以上
@@ -18,24 +15,32 @@ npm install
 npm run dev
 ```
 
+もし `npm install` で依存関係の解決に失敗する場合は、  
+デザインシステム担当に同期元の状態を確認してください。
 ## よく使うスクリプト
-- `npm run dev`: Next.js 開発サーバーを起動
-- `npm run build`: 本番ビルドを作成
-- `npm run lint`: Lint チェック
+- `npm run dev`: 開発サーバーを起動
+- `npm run storybook`: Storybook を起動
+- `npm run sync:ds`: AリポからBリポへ一括同期
+- `npm run sync:ds:file -- <path>`: A→B 単体ファイル同期
+- `npm run check:deps`: A/B の依存差分を確認
 
 ## Design System
 
-このスターターは `@fabrica_communications/design-system` を利用します。
+このスターターはAリポの実装を取り込み、Bリポ内に実体とCSS正本を持ちます。
 
-### デザインシステムを更新する場合（npm）
-`package.json` の `@fabrica_communications/design-system` のバージョンを更新し、再インストールします。
+### Aリポからの同期
+同期対象は `fabrica-product-starter/sync-list.json` で管理します。
 
 ```bash
-npm install
+# 一括同期
+npm run sync:ds
+
+# ファイル単体同期例
+npm run sync:ds:file -- src/components/ui/button.tsx
 ```
 
-必要に応じて、`package.json` のバージョンを指定してください。
+```bash
+# 依存差分チェック
+npm run check:deps
+```
 
-### npmjs を使う場合
-
-npmjs を利用する場合は `npm login` を一度実行してください。

@@ -1,7 +1,7 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
-  transpilePackages: ["@fabrica_communications/design-system"],
+  // デザインシステムは A→B 同期で実体を取り込むため、npm パッケージは使わない
 };
 
 export default nextConfig;

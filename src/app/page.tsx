@@ -1,10 +1,27 @@
-import { Button } from "@fabrica_communications/design-system";
+import { Button } from "@/components/ui/button";
 
 export default function HomePage() {
   return (
     <main style={{ padding: 24 }}>
       <h1>Fabrica Product Starter</h1>
-      <Button>Start</Button>
+      <Button variant="neutral" className="btn-accent">
+        Start
+      </Button>
+      <Button variant="accent">Start</Button>
+      <Button variant="destructive">Start</Button>
+      <Button variant="default">Start</Button>
+      <Button variant="default" size="sm">
+        Start
+      </Button>
+      <Button variant="default" size="icon">
+        S
+      </Button>
+      <Button variant="default" size="icon-sm">
+        S
+      </Button>
+      <Button variant="default" size="icon-sm">
+        S
+      </Button>
     </main>
   );
 }
