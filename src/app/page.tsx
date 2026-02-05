@@ -3,7 +3,7 @@ import { Button } from "@/components/ui/button";
 export default function HomePage() {
   return (
     <main style={{ padding: 24 }}>
-      <h1>Fabrica Product Starter</h1>
+      <h1>ここから始める</h1>
       <Button variant="neutral" className="btn-accent">
         Start
       </Button>

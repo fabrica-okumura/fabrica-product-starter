@@ -102,7 +102,7 @@ for (const target of targets) {
 const overwriteCount = copyEntries.length;
 if (overwriteCount > 0) {
   const ok = await confirm(
-    `一括同期: ${overwriteCount}件を上書きしますか`
+    `一括同期: ${overwriteCount}ファイルを上書きしますか`
   );
   if (!ok) process.exit(1);
 }

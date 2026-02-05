@@ -22,7 +22,11 @@
       "to": "src/lib/utils.ts"
     },
     {
-      "from": "src/app/layout.tsx",
+      "from": "src/lib/fonts.ts",
+      "to": "src/lib/fonts.ts"
+    },
+    {
+      "from": "src/app/layout.sync-template.tsx",
       "to": "src/app/layout.tsx"
     },
     {
