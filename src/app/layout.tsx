@@ -4,7 +4,7 @@ import { Toaster } from "@/components/ui/sonner";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "サイトタイトル",
+  title: "サイトタイトル（Bリポ）",
   description: "説明文です。",
 };
 

@@ -2,12 +2,8 @@
   "sourceRoot": "../fabrica-design-system",
   "targets": [
     {
-      "from": "src/components/ui/**/!(*.stories).{ts,tsx}",
-      "to": "src/components/ui"
-    },
-    {
-      "from": "src/components/shared/**/!(*.stories).{ts,tsx}",
-      "to": "src/components/shared"
+      "from": "src/components/**/!(*.stories).{ts,tsx}",
+      "to": "src/components"
     },
     {
       "from": "src/styles/**",

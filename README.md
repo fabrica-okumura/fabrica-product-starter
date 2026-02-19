@@ -52,7 +52,9 @@ npm run dev
 Bリポは Aリポの実装を取り込み、Bリポ内に実体とCSS正本を持ちます。
 
 ### Aリポからの同期
-同期対象は Bリポの `sync-list.json` で管理します。
+同期対象は Bリポの `sync-list.json` で管理します。`src/components` 配下は **ui・shared・Chunks（[name]）** を同期し、docsサイト専用（Aリポの `docs-site`）のみ同期しません。
+
+**同期対象のファイル・ディレクトリ構成は A と B で揃えておく必要があります。** 正本は A にあり、B の同期対象ファイルは A を更新したあと `npm run sync:ds` で上書きして反映します。同期対象パスは B 側で直接編集しないでください。
 
 ```bash
 # 一括同期
@@ -66,6 +68,19 @@ npm run sync:ds:file -- src/components/ui/button.tsx
 # 依存差分チェック
 npm run check:deps
 ```
+
+## ルールの責務分離（人向け / AI向け）
+
+- **人が守ること（README）:** Bリポで編集してよい範囲、同期運用、トラブル時の対処方針を記載します。
+- **AIが守ること（Skills）:** 同期対象の編集禁止、差分判断、コンフリクト時の作業手順を `.cursor/skills/**/SKILL.md` に記載します。
+- README は「方針」、Skills は「実行ルール」に限定します。
+
+## Agent Skills（AI向け運用ルール）
+
+- 主な Skill:
+  - `skill-authoring-governance`: README（人向け）とSkills（AI向け）の責務分離を保つための基準。
+  - `consumption-rules`: 同期対象ファイルとB専用変更の境界を判断し、安全に編集するためのルール。
+  - `sync-conflict-handling`: A→B同期時の競合・ドリフト発生時に復旧手順を案内するルール。
 
 ## MCP（Aリポのデザインシステム）
 

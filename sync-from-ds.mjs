@@ -21,7 +21,7 @@ const forceYes = args.includes("--yes");
 const singleFileArgIndex = args.findIndex((value) => value === "--file");
 const singleFile = singleFileArgIndex !== -1 ? args[singleFileArgIndex + 1] : null;
 
-const IGNORED_FILES = ["**/.DS_Store"];
+const IGNORED_FILES = ["**/.DS_Store", "**/components/docs-site/**"];
 
 const ensureDir = async (dirPath) => {
   await fs.mkdir(dirPath, { recursive: true });
