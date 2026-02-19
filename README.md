@@ -26,7 +26,7 @@ npm run dev
 - `npm run dev`: 開発サーバーを起動
 - `npm run storybook`: Storybook を起動
 - `npm run sync:ds`: AリポからBリポへ一括同期（新規プロダクト作成時にのみ実施する）
-- `npm run sync:ds:file -- <path>`: A→B 単体ファイル同期
+- `npm run sync:ds:file -- <path>`: Aリポ→Bリポ 単体ファイル同期
 - `npm run check:deps`: Aリポ/Bリポ の依存差分を確認（必要に応じてインストールする）
 
 ## リポジトリ構成（Bリポ）
@@ -42,7 +42,7 @@ npm run dev
 │   ├── styles/           # Aリポから同期
 │   └── tokens/           # Aリポから同期
 ├── public/               # Bリポ専用（Aリポとは同期しない）
-├── sync-list.json        # A→B 同期対象一覧
+├── sync-list.json        # Aリポ→Bリポ 同期対象一覧
 ├── sync-from-ds.mjs      # 同期スクリプト
 └── package.json
 ```
@@ -54,7 +54,7 @@ Bリポは Aリポの実装を取り込み、Bリポ内に実体とCSS正本を�
 ### Aリポからの同期
 同期対象は Bリポの `sync-list.json` で管理します。`src/components` 配下は **ui・shared・Chunks（[name]）** を同期し、docsサイト専用（Aリポの `docs-site`）のみ同期しません。
 
-**同期対象のファイル・ディレクトリ構成は A と B で揃えておく必要があります。** 正本は A にあり、B の同期対象ファイルは A を更新したあと `npm run sync:ds` で上書きして反映します。同期対象パスは B 側で直接編集しないでください。
+**同期対象のファイル・ディレクトリ構成は Aリポ と Bリポ で揃えておく必要があります。** 正本は Aリポ にあり、Bリポ の同期対象ファイルは Aリポ を更新したあと `npm run sync:ds` で上書きして反映します。同期対象パスは Bリポ 側で直接編集しないでください。
 
 ```bash
 # 一括同期
@@ -80,7 +80,7 @@ npm run check:deps
 - 主な Skill:
   - `skill-authoring-governance`: README（人向け）とSkills（AI向け）の責務分離を保つための基準。
   - `consumption-rules`: 同期対象ファイルとB専用変更の境界を判断し、安全に編集するためのルール。
-  - `sync-conflict-handling`: A→B同期時の競合・ドリフト発生時に復旧手順を案内するルール。
+  - `sync-conflict-handling`: Aリポ→Bリポ同期時の競合・ドリフト発生時に復旧手順を案内するルール。
 
 ## MCP（Aリポのデザインシステム）
 
