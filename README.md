@@ -77,10 +77,10 @@ npm run check:deps
 
 ## Agent Skills（AI向け運用ルール）
 
-- 主な Skill:
-  - `skill-authoring-governance`: README（人向け）とSkills（AI向け）の責務分離を保つための基準。
+- Skill一覧:
   - `consumption-rules`: 同期対象ファイルとB専用変更の境界を判断し、安全に編集するためのルール。
   - `sync-conflict-handling`: Aリポ→Bリポ同期時の競合・ドリフト発生時に復旧手順を案内するルール。
+  - `skill-authoring-governance`: README（人向け）とSkills（AI向け）の責務分離を保つための基準。
 
 ## MCP（Aリポのデザインシステム）
 
